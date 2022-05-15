@@ -22,10 +22,12 @@ function Prices(){
             <div>
                 <br></br>
                 {coinData.map((coin, i) => {
-                    const star = i%3===0 ? starFull : starOutline;
+                    const star = i%3===0 ? starFull : starOutline;  //Fix once watchlis it implemented
                     return (
                         <div className='container' key={i}>
-                            <div className='flex-1'><img src={star}/></div>
+                            <div className='flex-1'>
+                                <div><img src={star}/></div>
+                            </div>
                             <div className='flex-1'>{coin.rank}</div>
                             <div className='flex-1'><object data={coin.logo_url} width="32" height="32"></object></div>
                             <div className='flex-3'>{coin.name} - {coin.symbol}</div>
